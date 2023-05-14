@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  	<style>
+  		hr {color: rgb(255,0,0)}
+  	</style>
+  </head>
+  <body>
+	  <form autocomplete="off">
+		<div class="container text-center">
+			<div class="row">
+				<div class="mb-3 col-3">
+				 	<label for="name" class="form-label p-3">name</label>
+				 	<input class="form-control form-control-sm p-2" id="name" type="text" placeholder="name">
+				</div>
+				<div class="mb-3 col-3">
+					<label for="password" class="form-label p-3">password</label>
+					<input class="form-control form-control-sm p-2" id="password" type="password">
+				</div>
+				<div class="mb-3 col-3">
+					<label for="email" class="form-label p-3">email</label>
+					<input class="form-control form-control-sm p-2" id="email" type="email">
+				</div>
+				<div class="mb-3 col-3">
+					<label for="tel" class="form-label p-3">tel</label>
+					<input class="form-control form-control-sm p-2" id="tel" type="tel">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="number" class="form-label p-3">number</label>
+				    <input class="form-control form-control-sm p-2" id="number" type="number">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="range" class="form-label">range</label>
+				    <input class="form-control form-control-sm" id="range" type="range">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="date" class="form-label">date</label>
+				    <input class="form-control form-control-sm" id="date" type="date">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="month" class="form-label">month</label>
+				    <input class="form-control form-control-sm" id="month" type="month">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="time" class="form-label">time</label>
+				    <input class="form-control form-control-sm" id="time" type="time">
+				</div>
+				<div class="mb-3 col-3">
+				    <label for="color" class="form-label">color</label>
+				    <input class="form-control form-control-sm" id="color" type="color">
+				</div>
+			</div>
+		</div>
+		<hr>
+		
+	</form>
+	
+	<button id="btnJs" type="button" class="btn btn-light btn-lg border-dark ms-5">JS submit</button>
+	<button id="btnJq" type="button" class="btn btn-dark btn-lg ms-5">Jq submit</button>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  	<script>
+	    <!-- script-->
+	    const name = document.getElementById("name"),
+  			password = document.getElementById("password"),
+  			email = document.getElementById("email"),
+  			tel = document.getElementById("tel"),
+  			number = document.getElementById("number"),
+  			range = document.getElementById("range"),
+  			date = document.getElementById("date"),
+  			month = document.getElementById("month"),
+  			time = document.getElementById("time"),
+  			color = document.getElementById("color");
+	    
+		document.getElementById("btnJs").onclick = function() {
+			console.log("text : " + name.value);
+			console.log("password : " + password.value);
+			console.log("email : " + email.value);
+			console.log("tel : " + tel.value);
+			console.log("number : " + number.value);
+			console.log("range : " + range.value);
+			console.log("date : " + date.value);
+			console.log("month : " + month.value);
+			console.log("time : " + time.value);
+			console.log("color : " + color.value);
+			
+			name.value = "류경빈";
+		    password.value = "q1w2e3";
+		    email.value = "qwe@qasd.asd";
+		    tel.value = "qwe@qasd.asd";
+		    number.value = "1234";
+		    range.value = "25";
+		    date.value = "2323-05-14";
+		    month.value = "2023-05";
+		    time.value = "15:00";
+		    color.value = "#cecece";
+		    
+		    console.log("new text : " + name.value);
+			console.log("new password : " + password.value);
+			console.log("new email : " + email.value);
+			console.log("new tel : " + tel.value);
+			console.log("new number : " + number.value);
+			console.log("new range : " + range.value);
+			console.log("new date : " + date.value);
+			console.log("new month : " + month.value);
+			console.log("new time : " + time.value);
+			console.log("new color : " + color.value);
+		}
+		
+		// jquery
+		
+		$("#btnJq").on("click", function(){
+			console.log("text : " + $("#name").val());
+			console.log("password : " + $("#password").val());
+			console.log("email : " + $("#email").val());
+			console.log("tel : " + $("#tel").val());
+			console.log("number : " + $("#number").val());
+			console.log("range : " + $("#range").val());
+			console.log("date : " + $("#date").val());
+			console.log("month : " + $("#month").val());
+			console.log("time : " + $("#time").val());
+			console.log("color : " + $("#color").val());
+			
+			$("#name").val("뉴류경빈");
+			$("#password").val("q1w2e3r4t5");
+			$("#email").val("asd@qwer.qwe");
+			$("#tel").val("156-4568");
+			$("#number").val("648");
+			$("#range").val("0");
+			$("#date").val("2023-05-15");
+			$("#month").val("2023-06");
+			$("#time").val("09:00");
+			$("#color").val("#ffffff");
+			
+			console.log("new text : " + $("#name").val());
+			console.log("new password : " + $("#password").val());
+			console.log("new email : " + $("#email").val());
+			console.log("new tel : " + $("#tel").val());
+			console.log("new number : " + $("#number").val());
+			console.log("new range : " + $("#range").val());
+			console.log("new date : " + $("#date").val());
+			console.log("new month : " + $("#month").val());
+			console.log("new time : " + $("#time").val());
+			console.log("new color : " + $("#color").val());
+			
+		})
+		
+	</script>
+  </body>
+</html>
