@@ -54,6 +54,9 @@
 				    <label for="color" class="form-label">color</label>
 				    <input class="form-control form-control-sm" id="color" type="color">
 				</div>
+				<div class="mb-3 col-3">
+				<textarea class="form-control" aria-label="With textarea" id="textarea"></textarea>
+				</div>
 			</div>
 		</div>
 		<hr>
@@ -88,6 +91,7 @@
 			console.log("month : " + month.value);
 			console.log("time : " + time.value);
 			console.log("color : " + color.value);
+			console.log("textarea : " + document.getElementById("textarea").value);
 			
 			name.value = "류경빈";
 		    password.value = "q1w2e3";
