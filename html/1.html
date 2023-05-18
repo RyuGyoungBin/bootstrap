@@ -1,22 +1,56 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Datepicker - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
+    <meta charset="utf-8">
+    <style>
+        div {
+            border: 1px solid #000;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
  
-<p>Date: <input type="text" id="datepicker"></p>
+    <div>
+        <span>0번째</span>
+        <p>1번째</p>
+        <h3>2번째</h3>
+    </div>
+ 
+    <div>
+        <button>버튼</button>
+    </div>
+    <div>
+        <button>버튼</button>
+    </div>
+    <div>
+	    <div class="aba">
+	        <button>버튼</button>
+	    </div>
+    </div>
+    <div class="aba">
+        <button>버튼</button>
+    </div>                        
+    
+    <script>
+ 
+    // 같은 레벨에서 내가 몇번째 요소인지 찾을때는 index를 이용한다.
+    // 부모요소를 기준으로 내가 몇번째 자식이냐??
  
  
+    // 그런데 같은 레벨이 아니라 모든 button요소중 내가 몇번째 인지 찾을때에는??
+    $("button").click(function(event) {
+	    console.log("length : "+$("div.aba").length); // 2
+ 
+        var i = $(this).index();  
+        console.log(i);  // 0번째
+ 
+        // good
+        var j = $("button").index(this);  // 존재하는 모든 버튼을 기준으로 index
+        console.log(j);
+        
+    });
+ 
+    </script>
 </body>
 </html>

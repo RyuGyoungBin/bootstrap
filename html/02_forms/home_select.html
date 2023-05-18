@@ -44,6 +44,7 @@
   				console.log("jq click color : " + $("#color").val());
   				$("#color").val("4").prop("selected", true);
   				console.log("jq new click color : " + $("#color").val());
+  				console.log("slect : " + $("form").find("select").val());
   			});
   			
   			$("#color").on("change", function(){
