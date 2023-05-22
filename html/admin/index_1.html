@@ -231,7 +231,7 @@
 	      		</div>
 	      		<div class="modal-footer">
 		        	<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-		        	<button type="button" class="btn btn-secondary">Ok</button>
+		        	<button type="button" class="btn btn-secondary" id="modalOk">Ok</button>
 	      		</div>
 	    	</div>
 	 	</div>
@@ -240,10 +240,10 @@
   	<script>
   	// search
   	 	$("#start_date").datepicker({
-  	 		dateFormat: 'yy-mm-dd'
   	 	});
   	 	$("#end_date").datepicker({
-  	 		dateFormat: 'yy-mm-dd'
+  	 		maxDate : "+1m +1w",
+  	 		minDate : "-1y"
   	 	});
   		$("#start_date").on("change", function(){
   			console.log($("#start_date").val())
@@ -269,12 +269,16 @@
 	 	$("#del").on("click", function(){
 	 		$("#myModal").find("h1").text("삭제");
 	 		$("#myModal").find(".modal-body").text("삭제하시겠습니까");
-	 		
+	 		$("#modalOk").remove();
+	 		$(".modal-footer").append('<button type="button" class="btn btn-danger" id="modalOk">Ok</button>');
 		 	myModal.show();
+	 		
 	 	})
 	 	$("#delNot").on("click", function(){
 	 		$("#myModal").find("h1").text("제거");
 	 		$("#myModal").find(".modal-body").text("제거하시겠습니까");
+	 		$("#modalOk").remove();
+	 		$(".modal-footer").append('<button type="button" class="btn btn-warning" id="modalOk">Ok</button>');
 		 	myModal.show();
 	 	})
 	 	
