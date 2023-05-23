@@ -268,7 +268,10 @@
 	 		})
 	 	$("#del").on("click", function(){
 	 		$("#myModal").find("h1").text("삭제");
-	 		$("#myModal").find(".modal-body").text("삭제하시겠습니까");
+	 		//$("#myModal").find(".modal-body").text("삭제하시겠습니까");
+	 		$("#myModal").find(".modal-body").empty();
+	 		$("#myModal").find(".modal-body").append("<p>정말 삭제하시겠습니까.</p>");
+	 		$("#myModal").find(".modal-body").append("<p>정말로 삭제하시겠습니까.</p>");
 	 		$("#modalOk").remove();
 	 		$(".modal-footer").append('<button type="button" class="btn btn-danger" id="modalOk">Ok</button>');
 		 	myModal.show();
@@ -276,7 +279,9 @@
 	 	})
 	 	$("#delNot").on("click", function(){
 	 		$("#myModal").find("h1").text("제거");
-	 		$("#myModal").find(".modal-body").text("제거하시겠습니까");
+	 		//$("#myModal").find(".modal-body").text("제거하시겠습니까");
+	 		$("#myModal").find(".modal-body").empty();
+	 		$("#myModal").find(".modal-body").append("<p>정말 제거하시겠습니까.</p>");
 	 		$("#modalOk").remove();
 	 		$(".modal-footer").append('<button type="button" class="btn btn-warning" id="modalOk">Ok</button>');
 		 	myModal.show();
